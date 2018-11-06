@@ -1,8 +1,9 @@
 let particles = [];
 var mic;
+var myFont;
 
 function preload() {
-
+myFont = loadFont("./assets/Bagnard.otf");
 }
 
 function setup() {
@@ -14,6 +15,11 @@ function setup() {
 
 function draw() {
   background(0);
+  //testo
+  textFont('Bagnard');
+  textSize(30);
+  textAlign(CENTER);
+  text("Spread your voice!",windowWidth/2,60);
   mic.start();
   let p = new Particle();
   particles.push(p);
